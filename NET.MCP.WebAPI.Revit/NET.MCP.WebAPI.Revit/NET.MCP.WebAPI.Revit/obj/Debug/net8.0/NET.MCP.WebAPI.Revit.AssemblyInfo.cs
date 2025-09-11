@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NET.MCP.WebAPI.Revit")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58f325139a442ccd851412d01674f31c9ca30712")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f553cef99d248f4de24ba93b805e14be3c97238")]
 [assembly: System.Reflection.AssemblyProductAttribute("NET.MCP.WebAPI.Revit")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NET.MCP.WebAPI.Revit")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

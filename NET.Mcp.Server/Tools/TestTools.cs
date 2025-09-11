@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using ModelContextProtocol.Server;
 
 namespace NET.Mcp.Server.Tools
@@ -15,16 +16,20 @@ namespace NET.Mcp.Server.Tools
         [McpServerTool(Name = "RevitTool"), Description("Revit Execute Command , Also can execute some string output")]
         public string RevitCommandTool(string command)
         {
+            //同revit进行socket通讯获取参数返回
             return command;
-        }   
+        }
 
 
         [McpServerTool(Name = "CreateWall"), Description("Generation Paramaters That Can Create Wall in Revit")]
         public string RevitCreateWallTool(string command, double x, double y, double z, double x1, double y2)
         {
+            Console.WriteLine("123");
+            //同revit进行socket通讯获取参数返回
             return $@"
                 {{
                     ""command"": ""CreateWall"",
+                    ""elementId""：command,
                     ""arguments"": {{
                         ""start"": [{x}, {y}, {z}],
                         ""end"": [{x1}, {y2}, {z}]

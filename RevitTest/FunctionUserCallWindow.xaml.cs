@@ -16,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Media.Animation;
 using Autodesk.Revit.DB;
 using static RevitTest.Command;
 using static Autodesk.Revit.DB.SpecTypeId;
@@ -26,6 +27,7 @@ using Microsoft.Extensions.AI;
 using System.ClientModel;
 using Revit.Async;
 using System.Net.Http;
+using RevitTest.Models;
 
 
 namespace RevitTest
@@ -105,22 +107,104 @@ namespace RevitTest
             document = uiDocument.Document;
         }
 
-        private  async void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            var selections = uiDocument.Selection.GetElementIds();
-            var selection = ElementId.InvalidElementId;
-            if (selections.Any())
+             userInput = this.TextBox.Text.Trim();
+            if (!string.IsNullOrEmpty(userInput))
             {
-
-                var ele = document.GetElement(selections.FirstOrDefault()) as Wall;
-
-                var wallLocation = ele.Location as LocationCurve;
-                var wallString = ConvertToString(wallLocation.Curve);
-                this.userInput = $"WallId:{selection} , WallData: {wallString}";
+                // 添加用户消息
+                AddUserMessage(userInput);
+                
+                // 清空输入框
+                this.TextBox.Text = string.Empty;
+                
+                // 显示思考动画
+                ThinkingIndicator.Visibility = System.Windows. Visibility.Visible;
+                StartThinkingAnimation();
+                
+                // 发送消息
+                await Chat();
             }
-
-            this.TextResult.Text = userInput;
-            await Chat();
+        }
+        
+        // 添加用户消息
+        private void AddUserMessage(string message)
+        {
+            Border messageBorder = new Border
+            {
+                Style = (Style)FindResource("UserMessageStyle")
+            };
+            
+            TextBlock messageText = new TextBlock
+            {
+                Text = message,
+                Style = (Style)FindResource("MessageTextStyle")
+            };
+            
+            messageBorder.Child = messageText;
+            MessagePanel.Children.Add(messageBorder);
+            
+            // 滚动到底部
+            MessageScrollViewer.ScrollToEnd();
+        }
+        
+        // 添加AI消息
+        private void AddAIMessage(string message)
+        {
+            Border messageBorder = new Border
+            {
+                Style = (Style)FindResource("AIMessageStyle")
+            };
+            
+            TextBlock messageText = new TextBlock
+            {
+                Text = message,
+                Style = (Style)FindResource("MessageTextStyle")
+            };
+            
+            messageBorder.Child = messageText;
+            MessagePanel.Children.Add(messageBorder);
+            
+            // 滚动到底部
+            MessageScrollViewer.ScrollToEnd();
+        }
+        
+        // 启动思考动画
+        private void StartThinkingAnimation()
+        {
+            // 创建动画
+            DoubleAnimation opacityAnimation = new DoubleAnimation
+            {
+                From = 1.0,
+                To = 0.3,
+                Duration = TimeSpan.FromSeconds(0.7),
+                AutoReverse = true,
+                RepeatBehavior = RepeatBehavior.Forever
+            };
+            
+            // 应用动画到点
+            Dot1.BeginAnimation(OpacityProperty, opacityAnimation);
+            
+            // 为其他点创建延迟动画
+            DoubleAnimation opacityAnimation2 = opacityAnimation.Clone();
+            opacityAnimation2.BeginTime = TimeSpan.FromSeconds(0.2);
+            Dot2.BeginAnimation(OpacityProperty, opacityAnimation2);
+            
+            DoubleAnimation opacityAnimation3 = opacityAnimation.Clone();
+            opacityAnimation3.BeginTime = TimeSpan.FromSeconds(0.4);
+            Dot3.BeginAnimation(OpacityProperty, opacityAnimation3);
+        }
+        
+        // 停止思考动画
+        private void StopThinkingAnimation()
+        {
+            Dot1.BeginAnimation(OpacityProperty, null);
+            Dot2.BeginAnimation(OpacityProperty, null);
+            Dot3.BeginAnimation(OpacityProperty, null);
+            
+            Dot1.Opacity = 1.0;
+            Dot2.Opacity = 1.0;
+            Dot3.Opacity = 1.0;
         }
 
 
@@ -142,11 +226,11 @@ namespace RevitTest
                     httpClient.BaseAddress = new Uri(baseUrl);
                     
                     // 添加跨域请求头
-                    httpClient.DefaultRequestHeaders.Add("Origin", "http://localhost");
-                    
+                    httpClient.DefaultRequestHeaders.Add("Access-Control-Allow-Origin", "*");
+
                     // 构建请求URL，传递用户输入
-                    string requestUrl = $"/RevitTest?userInput={this.TextBox.Text}"; 
-                    
+                    string requestUrl = $"/RevitTest?userInput={userInput}";
+
                     // 发送GET请求到RevitTestController
                     var response = await httpClient.GetAsync(requestUrl);
                     
@@ -161,21 +245,45 @@ namespace RevitTest
                     {
                         // 将ChatResponse转换为可显示的文本
                         var responseText = JsonConvert.DeserializeObject<ChatResponse>(chatResponse);
-                        foreach (var text in responseText?.Messages?.SelectMany(x => x?.Contents.Select(x=>x.Text)))
+                        
+                        // 停止思考动画
+                        ThinkingIndicator.Visibility = System.Windows.Visibility.Collapsed;
+                        StopThinkingAnimation();
+                        
+                        // 流式添加AI回复
+                        if (responseText?.Messages != null)
                         {
-                            this.TextResult.Text +=text +"\n";
+                            foreach (var message in responseText.Messages)
+                            {
+                                foreach (var content in message.Contents)
+                                {
+                                    // 模拟流式效果，每个消息间隔一小段时间
+                                    await Task.Delay(100);
+                                    if (string.IsNullOrEmpty(content.Text)) continue;
+                                    AddAIMessage(content.Text);
+                                }
+                            }
                         }
+                        else
+                        {
+                            // 如果没有消息，显示一个默认回复
+                            AddAIMessage("抱歉，我没有找到合适的回复。");
+                        }
+                        
+                        // 滚动到底部
+                        MessageScrollViewer.ScrollToEnd();
                     }
                 }
             }
             catch (Exception ex)
             {
-                // 显示错误信息
-                this.TextResult.Text = $"Error: {ex.Message}";
-                if (ex.InnerException != null)
-                {
-                    this.TextResult.Text += $"\nInner Exception: {ex.InnerException.Message}";
-                }
+                // 停止思考动画
+                ThinkingIndicator.Visibility = System.Windows.Visibility.Collapsed;
+                StopThinkingAnimation();
+                
+                // 显示错误消息
+                AddAIMessage($"发生错误: {ex.Message}");
+                MessageScrollViewer.ScrollToEnd();
             }
         }
 

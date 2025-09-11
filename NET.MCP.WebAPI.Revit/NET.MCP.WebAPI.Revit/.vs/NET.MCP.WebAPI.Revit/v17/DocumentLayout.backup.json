@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\GitHub\\revit-mcp-dotnet\\NET.MCP.WebAPI.Revit\\NET.MCP.WebAPI.Revit\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CE5B1438-B797-43F9-953A-5B1355A90E36}|NET.MCP.WebAPI.Revit\\NET.MCP.WebAPI.Revit.csproj|d:\\github\\revit-mcp-dotnet\\net.mcp.webapi.revit\\net.mcp.webapi.revit\\net.mcp.webapi.revit\\controllers\\revittestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE5B1438-B797-43F9-953A-5B1355A90E36}|NET.MCP.WebAPI.Revit\\NET.MCP.WebAPI.Revit.csproj|solutionrelative:net.mcp.webapi.revit\\controllers\\revittestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CE5B1438-B797-43F9-953A-5B1355A90E36}|NET.MCP.WebAPI.Revit\\NET.MCP.WebAPI.Revit.csproj|d:\\github\\revit-mcp-dotnet\\net.mcp.webapi.revit\\net.mcp.webapi.revit\\net.mcp.webapi.revit\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{CE5B1438-B797-43F9-953A-5B1355A90E36}|NET.MCP.WebAPI.Revit\\NET.MCP.WebAPI.Revit.csproj|solutionrelative:net.mcp.webapi.revit\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CE5B1438-B797-43F9-953A-5B1355A90E36}|NET.MCP.WebAPI.Revit\\NET.MCP.WebAPI.Revit.csproj|d:\\github\\revit-mcp-dotnet\\net.mcp.webapi.revit\\net.mcp.webapi.revit\\net.mcp.webapi.revit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CE5B1438-B797-43F9-953A-5B1355A90E36}|NET.MCP.WebAPI.Revit\\NET.MCP.WebAPI.Revit.csproj|solutionrelative:net.mcp.webapi.revit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE5B1438-B797-43F9-953A-5B1355A90E36}|NET.MCP.WebAPI.Revit\\NET.MCP.WebAPI.Revit.csproj|d:\\github\\revit-mcp-dotnet\\net.mcp.webapi.revit\\net.mcp.webapi.revit\\net.mcp.webapi.revit\\controllers\\revittestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE5B1438-B797-43F9-953A-5B1355A90E36}|NET.MCP.WebAPI.Revit\\NET.MCP.WebAPI.Revit.csproj|solutionrelative:net.mcp.webapi.revit\\controllers\\revittestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CE5B1438-B797-43F9-953A-5B1355A90E36}|NET.MCP.WebAPI.Revit\\NET.MCP.WebAPI.Revit.csproj|d:\\github\\revit-mcp-dotnet\\net.mcp.webapi.revit\\net.mcp.webapi.revit\\net.mcp.webapi.revit\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,17 +34,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\GitHub\\revit-mcp-dotnet\\NET.MCP.WebAPI.Revit\\NET.MCP.WebAPI.Revit\\NET.MCP.WebAPI.Revit\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "NET.MCP.WebAPI.Revit\\Properties\\launchSettings.json",
               "ToolTip": "D:\\GitHub\\revit-mcp-dotnet\\NET.MCP.WebAPI.Revit\\NET.MCP.WebAPI.Revit\\NET.MCP.WebAPI.Revit\\Properties\\launchSettings.json",
               "RelativeToolTip": "NET.MCP.WebAPI.Revit\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-09-11T12:55:48.614Z",
               "EditorCaption": ""
@@ -77,13 +77,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "RevitTestController.cs",
               "DocumentMoniker": "D:\\GitHub\\revit-mcp-dotnet\\NET.MCP.WebAPI.Revit\\NET.MCP.WebAPI.Revit\\NET.MCP.WebAPI.Revit\\Controllers\\RevitTestController.cs",
               "RelativeDocumentMoniker": "NET.MCP.WebAPI.Revit\\Controllers\\RevitTestController.cs",
               "ToolTip": "D:\\GitHub\\revit-mcp-dotnet\\NET.MCP.WebAPI.Revit\\NET.MCP.WebAPI.Revit\\NET.MCP.WebAPI.Revit\\Controllers\\RevitTestController.cs",
               "RelativeToolTip": "NET.MCP.WebAPI.Revit\\Controllers\\RevitTestController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAYwDgAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAgwDwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-11T12:47:57.965Z",
               "EditorCaption": ""
@@ -103,13 +103,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\GitHub\\revit-mcp-dotnet\\NET.MCP.WebAPI.Revit\\NET.MCP.WebAPI.Revit\\NET.MCP.WebAPI.Revit\\Program.cs",
               "RelativeDocumentMoniker": "NET.MCP.WebAPI.Revit\\Program.cs",
               "ToolTip": "D:\\GitHub\\revit-mcp-dotnet\\NET.MCP.WebAPI.Revit\\NET.MCP.WebAPI.Revit\\NET.MCP.WebAPI.Revit\\Program.cs",
               "RelativeToolTip": "NET.MCP.WebAPI.Revit\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-11T12:47:33.176Z",
               "EditorCaption": ""

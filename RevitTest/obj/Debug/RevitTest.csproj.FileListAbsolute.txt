@@ -49,3 +49,4 @@ D:\GitHub\revit-mcp-dotnet\RevitTest\bin\Debug\System.Threading.Channels.dll
 D:\GitHub\revit-mcp-dotnet\RevitTest\bin\Debug\System.Threading.Tasks.Extensions.dll
 D:\GitHub\revit-mcp-dotnet\RevitTest\bin\Debug\System.ValueTuple.dll
 D:\GitHub\revit-mcp-dotnet\RevitTest\bin\Debug\Revit.Async.dll
+D:\GitHub\revit-mcp-dotnet\RevitTest\obj\Debug\GeneratedInternalTypeHelper.g.cs

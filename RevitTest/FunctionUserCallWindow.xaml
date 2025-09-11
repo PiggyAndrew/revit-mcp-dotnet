@@ -4,16 +4,177 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         xmlns:local="clr-namespace:RevitTest"
+        xmlns:converters="clr-namespace:RevitTest.Converters"
         mc:Ignorable="d" 
-        d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-        </Grid.RowDefinitions>
-        <Button Grid.Row="1" Content="发送"  VerticalAlignment="Top" Height="30" Width="78" Click="Button_Click"/>
-        <TextBox Grid.Row="0" x:Name="TextBox"  TextWrapping="Wrap" Text="调用revit commd mcp " VerticalAlignment="Top" Width="533" Height="115"/>
-        <TextBlock Grid.Row="2" Name="TextResult"></TextBlock>
-    </Grid>
+        Title="Revit AI 助手"
+        Height="700" Width="1000"
+        WindowStartupLocation="CenterScreen"
+        Background="#F0F2F5">
+    <Window.Resources>
+        <!-- 值转换器 -->
+        <converters:BooleanToStyleConverter x:Key="BooleanToMessageStyleConverter"
+                                          TrueStyle="{StaticResource UserMessageStyle}"
+                                          FalseStyle="{StaticResource AIMessageStyle}"/>
+        <!-- 发送按钮样式 -->
+        <Style x:Key="RoundedButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#2196F3"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Padding" Value="15,8"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                CornerRadius="20">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#1976D2"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+        <!-- 输入框样式 -->
+        <Style x:Key="ChatInputStyle" TargetType="TextBox">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="#333333"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="15"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="#E0E0E0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                CornerRadius="10">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <!-- 用户消息样式 -->
+        <Style x:Key="UserMessageStyle" TargetType="Border">
+            <Setter Property="Background" Value="#DCF8C6"/>
+            <Setter Property="BorderBrush" Value="#C5E1A5"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Padding" Value="12"/>
+            <Setter Property="Margin" Value="40,5,5,5"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="MaxWidth" Value="600"/>
+        </Style>
+        
+        <!-- AI消息样式 -->
+        <Style x:Key="AIMessageStyle" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#E0E0E0"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Padding" Value="12"/>
+            <Setter Property="Margin" Value="5,5,40,5"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="MaxWidth" Value="600"/>
+        </Style>
+        
+        <!-- 思考中动画样式 -->
+        <Style x:Key="ThinkingIndicatorStyle" TargetType="StackPanel">
+            <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="5,5,40,5"/>
+        </Style>
+        
+        <!-- 消息文本样式 -->
+        <Style x:Key="MessageTextStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#333333"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+    </Window.Resources>
+    
+    <Border Background="White" Margin="10" CornerRadius="10">
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="10" ShadowDepth="1" Opacity="0.2"/>
+        </Border.Effect>
+        
+        <Grid Margin="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            <!-- 标题 -->
+            <Grid Grid.Row="0" Margin="0,0,0,15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <TextBlock Grid.Column="0"
+                           Text="Revit AI 聊天助手" 
+                           FontSize="22" 
+                           FontWeight="Bold" 
+                           Foreground="#2196F3" 
+                           VerticalAlignment="Center"/>
+                
+                <!-- 思考中指示器 (默认隐藏) -->
+                <StackPanel x:Name="ThinkingIndicator"
+                            Grid.Column="1"
+                            Style="{StaticResource ThinkingIndicatorStyle}"
+                            Visibility="Collapsed">
+                    <TextBlock Text="AI正在思考" 
+                               Foreground="#757575" 
+                               FontSize="14" 
+                               Margin="0,0,8,0"/>
+                    <Ellipse x:Name="Dot1" Width="6" Height="6" Fill="#2196F3" Margin="2,0"/>
+                    <Ellipse x:Name="Dot2" Width="6" Height="6" Fill="#2196F3" Margin="2,0"/>
+                    <Ellipse x:Name="Dot3" Width="6" Height="6" Fill="#2196F3" Margin="2,0"/>
+                </StackPanel>
+            </Grid>
+            
+            <!-- 聊天结果显示区域 -->
+            <Border Grid.Row="1" 
+                    Background="#F9F9F9" 
+                    CornerRadius="10" 
+                    Margin="0,0,0,15">
+                <ScrollViewer x:Name="MessageScrollViewer" VerticalScrollBarVisibility="Auto">
+                    <StackPanel x:Name="MessagePanel" Margin="10">
+                        <!-- 消息将在代码中动态添加 -->
+                    </StackPanel>
+                </ScrollViewer>
+            </Border>
+            
+            <!-- 输入区域 -->
+            <TextBox Grid.Row="2" 
+                     x:Name="TextBox" 
+                     Style="{StaticResource ChatInputStyle}" 
+                     TextWrapping="Wrap" 
+                     AcceptsReturn="True"
+                     Height="100" 
+                     Margin="0,0,0,15"
+                     Text="调用revit commd mcp "/>
+            
+            <!-- 发送按钮 -->
+            <Button Grid.Row="3" 
+                    x:Name="SendButton"
+                    Content="发送" 
+                    Style="{StaticResource RoundedButtonStyle}"
+                    HorizontalAlignment="Right" 
+                    Width="100" 
+                    Click="Button_Click"/>
+        </Grid>
+    </Border>
 </Window>
