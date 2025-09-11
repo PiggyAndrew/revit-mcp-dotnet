@@ -17,110 +17,168 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Autodesk.Revit.DB;
+using static RevitTest.Command;
+using static Autodesk.Revit.DB.SpecTypeId;
+using ModelContextProtocol.Client;
+using OpenAI;
+using OpenAI.Chat;
+using Microsoft.Extensions.AI;
+using System.ClientModel;
+using Revit.Async;
+using System.Net.Http;
 
 
 namespace RevitTest
 {
+    public class CreateWallData
+    {
+        [JsonProperty(PropertyName = "command")]
+        public string Command { get; set; } = string.Empty;
+        [JsonProperty(PropertyName = "arguments")]
+        public CreateWallArguments Args { get; set; }
+    }
+
+    public class CreateWallArguments
+    {
+        [JsonProperty(PropertyName = "start")]
+        public double[] Start { get; set; }
+        [JsonProperty(PropertyName = "end")]
+        public double[] End { get; set; }
+    }
+
+    public class ContentItem
+    {
+        public string Type { get; set; }
+        public string Text { get; set; }
+    }
+
+    public class ResponseData
+    {
+        public List<ContentItem> Content { get; set; }
+        public bool IsError { get; set; }
+    }
+    
+    // ChatResponse类定义，用于接收WebAPI返回的数据
+    public class ChatResponse
+    {
+        [JsonProperty("messages")]
+        public List<ChatResponseMessage> Messages { get; set; } = new List<ChatResponseMessage>();
+        
+        [JsonProperty("text")]
+        public string Text { get; set; }
+    }
+    
+    public class ChatResponseMessage
+    {
+        [JsonProperty("text")]
+        public string Text { get; set; }
+        
+        [JsonProperty("role")]
+        public string Role { get; set; }
+        
+        [JsonProperty("contents")]
+        public List<ChatResponseContent> Contents { get; set; } = new List<ChatResponseContent>();
+    }
+    
+    public class ChatResponseContent
+    {
+        [JsonProperty("text")]
+        public string Text { get; set; }
+        
+        [JsonProperty("type")]
+        public string Type { get; set; }
+    }
+
     /// <summary>
     /// FunctionUserCallWindow.xaml 的交互逻辑
     /// </summary>
     public partial class FunctionUserCallWindow : Window
     {
-        ExecuteEventHandler _executeEventHandler = null;
-        ExternalEvent _externalEvent = null;
-        public FunctionUserCallWindow(ExecuteEventHandler executeEventHandler, ExternalEvent externalEvent)
+        private string userInput;
+        private readonly UIDocument uiDocument;
+        private Document document;
+
+        public FunctionUserCallWindow(ExternalCommandData commandData)
         {
             InitializeComponent();
-            _executeEventHandler = executeEventHandler;
-            _externalEvent = externalEvent;
+            uiDocument = commandData.Application.ActiveUIDocument;
+            document = uiDocument.Document;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private  async void Button_Click(object sender, RoutedEventArgs e)
         {
-
-            if (_externalEvent != null)
+            var selections = uiDocument.Selection.GetElementIds();
+            var selection = ElementId.InvalidElementId;
+            if (selections.Any())
             {
-                _executeEventHandler.ExecuteAction = new Action<UIApplication>((app) =>
+
+                var ele = document.GetElement(selections.FirstOrDefault()) as Wall;
+
+                var wallLocation = ele.Location as LocationCurve;
+                var wallString = ConvertToString(wallLocation.Curve);
+                this.userInput = $"WallId:{selection} , WallData: {wallString}";
+            }
+
+            this.TextResult.Text = userInput;
+            await Chat();
+        }
+
+
+        private async Task Chat()
+        {
+            try
+            {
+                // 配置HttpClientHandler以处理自签名证书
+                var handler = new HttpClientHandler
                 {
-                    if (app.ActiveUIDocument == null || app.ActiveUIDocument.Document == null)
-                        return;
+                    ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
+                };
+                
+                // 创建HttpClient实例
+                using (var httpClient = new HttpClient(handler))
+                {
+                    // 设置API基础地址
+                    string baseUrl = "http://localhost:5024"; // 使用HTTPS协议和正确的SSL端口
+                    httpClient.BaseAddress = new Uri(baseUrl);
+                    
+                    // 添加跨域请求头
+                    httpClient.DefaultRequestHeaders.Add("Origin", "http://localhost");
+                    
+                    // 构建请求URL，传递用户输入
+                    string requestUrl = $"/RevitTest?userInput={this.TextBox.Text}"; 
+                    
+                    // 发送GET请求到RevitTestController
+                    var response = await httpClient.GetAsync(requestUrl);
+                    
+                    // 确保请求成功
+                    response.EnsureSuccessStatusCode();
 
-                    var uiDoc = app.ActiveUIDocument;
-                    var selections = uiDoc.Selection.GetElementIds();
-                    var selection = ElementId.InvalidElementId;
-                    if (selections.Any())
+                    // 读取响应内容
+                    var chatResponse = await response.Content.ReadAsStringAsync();
+
+                    // 显示响应结果
+                    if (chatResponse != null)
                     {
-                        selection = selections.First();
-                    }
-                    //Document revitDoc = app.ActiveUIDocument.Document;
-                    //using (Transaction transaction = new Transaction(revitDoc, "Creat Line1"))
-                    //{
-                    //    transaction.Start();
-                    //    Autodesk.Revit.DB.Line line = Autodesk.Revit.DB.Line.CreateBound(new XYZ(0, 0, 0), new XYZ(100, 0, 0));
-                    //    SketchPlane sketchPlane = SketchPlane.Create(revitDoc, Plane.CreateByNormalAndOrigin(XYZ.BasisZ, XYZ.Zero));
-                    //    revitDoc.Create.NewModelCurve(line as Curve, sketchPlane);
-                    //    transaction.Commit();
-                    //}
-
-                    var args = string.Empty;
-                    if (selection.Value == -1)
-                    {
-                        args = string.Empty;
-                    }
-                    else
-                    {
-
-                        var ele = uiDoc.Document.GetElement(selection) as Wall;
-
-                        var wallLocation = ele.Location as LocationCurve;
-                        var wallString = ConvertToString(wallLocation.Curve);
-                        args = $"WallId:{selection} , WallData: {wallString}";
-                    }
-
-                    var process = new Process
-                    {
-                        StartInfo = new ProcessStartInfo
+                        // 将ChatResponse转换为可显示的文本
+                        var responseText = JsonConvert.DeserializeObject<ChatResponse>(chatResponse);
+                        foreach (var text in responseText?.Messages?.SelectMany(x => x?.Contents.Select(x=>x.Text)))
                         {
-                            FileName = @"NET.Mcp.Client.exe",          // 可执行文件路径（如 "cmd.exe"）
-                            Arguments = this.TextBox.Text + $"选中构件的数据为 ：{args}",       // 命令行参数
-                            UseShellExecute = false,     // 必须为 false 才能重定向输出
-                            CreateNoWindow = true,       // 隐藏控制台窗口
-                            RedirectStandardOutput = true, // 重定向标准输出
-                            RedirectStandardError = true  // 重定向错误输出（可选）
+                            this.TextResult.Text +=text +"\n";
                         }
-                    };
-
-                    process.Start();
-
-                    // 读取所有输出（同步方式）
-                    string output = process.StandardOutput.ReadToEnd();
-                    string errors = process.StandardError.ReadToEnd(); // 如果需要错误流
-
-                    process.WaitForExit(); // 等待进程结束
-                    process.Close(); // 关闭进程
-
-                    if (string.IsNullOrEmpty(errors))
-                    {
-                        var jsonConvertData = JsonConvert.DeserializeObject<CreateWallData>(output);
-                        var methodName = jsonConvertData.Command;
-                        // 1. 加载DLL
-                        Assembly assembly = typeof(Command).Assembly;
-
-                        // 2. 查找实现类（通过接口或命名约定）
-                        Type commandType = assembly.GetTypes()
-                            .FirstOrDefault(t => t.Name == methodName);
-
-                        if (commandType == null)
-                            throw new Exception($"未找到 {methodName} 的实现类");
-
-                        var eCommand = (IRevitCommand)Activator.CreateInstance(commandType);
-                        eCommand.Execute(JsonConvert.SerializeObject(jsonConvertData.Args));
-
                     }
-                });
-                _externalEvent.Raise();
+                }
+            }
+            catch (Exception ex)
+            {
+                // 显示错误信息
+                this.TextResult.Text = $"Error: {ex.Message}";
+                if (ex.InnerException != null)
+                {
+                    this.TextResult.Text += $"\nInner Exception: {ex.InnerException.Message}";
+                }
             }
         }
+
 
 
         private string ConvertToString(Curve curve)
@@ -131,36 +189,6 @@ namespace RevitTest
         private string ConvertToString(XYZ point)
         {
             return $"X = {point.X * 304.8}, Y = {point.Y * 304.8}, Z = {point.Z * 304.8}";
-        }
-
-        public class ExecuteEventHandler : IExternalEventHandler
-        {
-            public string Name { get; private set; }
-
-            public Action<UIApplication> ExecuteAction { get; set; }
-
-            public ExecuteEventHandler(string name)
-            {
-                Name = name;
-            }
-
-            public void Execute(UIApplication app)
-            {
-                if (ExecuteAction != null)
-                {
-                    try
-                    {
-                        ExecuteAction(app);
-                    }
-                    catch
-                    { }
-                }
-            }
-
-            public string GetName()
-            {
-                return Name;
-            }
         }
     }
 }

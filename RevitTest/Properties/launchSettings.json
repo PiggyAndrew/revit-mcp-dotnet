@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RevitTest": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

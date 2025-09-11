@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\NET.MCP.WebAPI.Revit.props" />
+</Project>

@@ -1,0 +1,8 @@
+is_global = true
+build_property.RootNamespace = RevitTest
+build_property.ProjectDir = D:\GitHub\revit-mcp-dotnet\RevitTest\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 

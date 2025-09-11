@@ -17,27 +17,21 @@ using ChatMessage = Microsoft.Extensions.AI.ChatMessage;
 using Newtonsoft.Json;
 using System.Windows.Forms;
 
-var input = string.Join("",args);
+var input = string.Join("查看revit command mcp", args);
 
-//MessageBox.Show($"Input: {input}", "Input Command", MessageBoxButtons.OK, MessageBoxIcon.Information);
 Debug.Print(input);
-//var input = "在一个已经存在的id为333160的坐标为(0,0,0)到(10000,0,0)高度为3000 单位是mm的墙体 ， 插入一个窗户，窗户位置可以由你自行决定";
-//var input = "创建一个墙体，墙体坐标为(0,0,0)->(10000,0,0)，单位是mm";
-//var input =
-//    "选中的墙体高度为3000 单位是mm的墙体 ， 插入一个窗户，窗户位置可以由你自行决定选中构件的数据为 ：WallId:333160 , WallData: Curve Data is : Start = X = 0, Y = 0, Z = 0 , End = X = 10000, Y = 0, Z = 0";
-//"选中的墙体高度为3000 单位是mm的墙体 ， 插入一个窗户，窗户位置可以由你自行决定 , Curve Data is : Start = X = 0, Y = 0, Z = 0 , End = X = 10000, Y = 0, Z = 0";
 await using var mcpClient = await McpClientFactory.CreateAsync(new StdioClientTransport(new StdioClientTransportOptions()
 {
     Name = "Demo Server",
     Command = "powershell",
-    Arguments = ["NET.Mcp.Server.exe"]
+    Arguments = ["D:\\GitHub\\revit-mcp-dotnet\\NET.Mcp.Server\\bin\\Debug\\net8.0\\NET.Mcp.Server.exe"]
 }));
 
 var openAiOptions = new OpenAIClientOptions();
 openAiOptions.Endpoint = new Uri("https://api.deepseek.com/v1/");
 
 
-var chatClient = new ChatClient("deepseek-chat", new ApiKeyCredential("sk-xxxxxxxxxxxx"), openAiOptions);
+var chatClient = new ChatClient("deepseek-chat", new ApiKeyCredential("sk-58c16b28eacc41349e6ffd875d7c914a"), openAiOptions);
 
 var client = new ChatClientBuilder(chatClient.AsIChatClient()).UseFunctionInvocation().Build();
 
@@ -50,13 +44,6 @@ var prompts = new List<Microsoft.Extensions.AI.ChatMessage>
 
 var tools = await mcpClient.ListToolsAsync();
 
-//foreach (var tool in tools)
-//{
-//    Console.WriteLine($"Tool Name: {tool.Name}");
-//    Console.WriteLine($"Tool Description: {tool.Description}");
-//    Console.WriteLine();
-
-//}
 
 var chatOptions = new ChatOptions()
 {
@@ -64,32 +51,20 @@ var chatOptions = new ChatOptions()
 };
 var res = await client.GetResponseAsync(prompts, chatOptions);
 
-var message = res.Messages[1].Contents[0];
-var value = ((Microsoft.Extensions.AI.FunctionResultContent)message).Result;
-var convert = JsonConvert.DeserializeObject(value.ToString());
+var message = res.Messages[0].Contents[0];
+//var value = ((Microsoft.Extensions.AI.FunctionResultContent)message).Result;
+var convert = JsonConvert.DeserializeObject(message.ToString());
 
 // 反序列化
-ResponseData data = JsonConvert.DeserializeObject<ResponseData>(value.ToString());
+ResponseData data = JsonConvert.DeserializeObject<ResponseData>(message.ToString());
 
 // 访问数据
 foreach (var item in data.Content)
 {
-    //Console.WriteLine($"Type: {item.Type}, Text: {item.Text}");
     var d = item.Text;
     
     Console.WriteLine(d);
 }
-//Console.WriteLine($"IsError: {data.IsError}");
-
-//var result =  await mcpClient.CallToolAsync("RevitTool", new Dictionary<string, object?>()
-//{
-//    ["command"] = "Hello"
-//});
-
-//Console.WriteLine(result.Content.First().Text);
-
-//Console.Read();
-
 
 public class CreateWallData
 {

@@ -7,9 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Autodesk.Revit.UI;
+using Autodesk.Revit.Attributes;
 
 namespace RevitTest
 {
+    [Transaction(TransactionMode.Manual)]
+    [Regeneration(RegenerationOption.Manual)]
     public class Command : IExternalCommand
     {
         public class InsertWindowData
@@ -148,15 +151,13 @@ namespace RevitTest
 
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
-            var executeEventHandler = new FunctionUserCallWindow.ExecuteEventHandler("MCP");
-            var externalEvent = ExternalEvent.Create(executeEventHandler);
             // show UI  
-            var modelessView = new FunctionUserCallWindow(executeEventHandler, externalEvent);
+            var modelessView = new FunctionUserCallWindow(commandData);
 
             //窗口一直显示在主程序之前  
             System.Windows.Interop.WindowInteropHelper mainUI = new System.Windows.Interop.WindowInteropHelper(modelessView);
             mainUI.Owner = System.Diagnostics.Process.GetCurrentProcess().MainWindowHandle;
-            modelessView.Show();
+            modelessView.ShowDialog();
 
 
             return Result.Succeeded;

@@ -1108,20 +1108,20 @@
     ]
   },
   "packageFolders": {
-    "D:\\Backup\\Documents\\.nuget\\packages": {},
-    "F:\\ViusalStudio\\share\\NuGetPackages": {}
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
+    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VS_Project\\RevitMCP\\NET.Mcp.Client\\NET.Mcp.Client.csproj",
+      "projectUniqueName": "D:\\GitHub\\revit-mcp-dotnet\\NET.Mcp.Client\\NET.Mcp.Client.csproj",
       "projectName": "NET.Mcp.Client",
-      "projectPath": "D:\\VS_Project\\RevitMCP\\NET.Mcp.Client\\NET.Mcp.Client.csproj",
-      "packagesPath": "D:\\Backup\\Documents\\.nuget\\packages",
-      "outputPath": "D:\\VS_Project\\RevitMCP\\NET.Mcp.Client\\obj\\",
+      "projectPath": "D:\\GitHub\\revit-mcp-dotnet\\NET.Mcp.Client\\NET.Mcp.Client.csproj",
+      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\revit-mcp-dotnet\\NET.Mcp.Client\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "F:\\ViusalStudio\\share\\NuGetPackages"
+        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1151,7 +1151,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -1190,7 +1190,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

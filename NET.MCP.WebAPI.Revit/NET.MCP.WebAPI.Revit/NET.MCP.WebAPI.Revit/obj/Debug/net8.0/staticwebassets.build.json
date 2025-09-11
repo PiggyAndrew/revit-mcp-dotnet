@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "7UHj6/9EHBekiM39fwcygD5RhQp1UzmiezDfBud1jhM=",
+  "Source": "NET.MCP.WebAPI.Revit",
+  "BasePath": "_content/NET.MCP.WebAPI.Revit",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

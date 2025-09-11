@@ -1,0 +1,29 @@
+[
+  {
+    "ContainingType": "NET.MCP.WebAPI.Revit.Controllers.RevitTestController",
+    "Method": "Test",
+    "RelativePath": "RevitTest",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userInput",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.Extensions.AI.ChatResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "Test"
+  }
+]
