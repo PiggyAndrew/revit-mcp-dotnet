@@ -31,7 +31,7 @@ namespace NET.MCP.WebAPI.Revit.Controllers
             openAiOptions.Endpoint = new Uri("https://api.deepseek.com/v1/");
 
 
-            var chatClient = new ChatClient("deepseek-chat", new ApiKeyCredential("sk-58c16b28eacc41349e6ffd875d7c914a"), openAiOptions);
+            var chatClient = new ChatClient("deepseek-chat", new ApiKeyCredential("sk-XXXXXX"), openAiOptions);
 
             var client = new ChatClientBuilder(chatClient.AsIChatClient()).UseFunctionInvocation().Build();
 

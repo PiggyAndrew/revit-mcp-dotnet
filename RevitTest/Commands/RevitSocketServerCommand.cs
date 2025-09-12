@@ -201,7 +201,7 @@ namespace RevitTest.Commands
         {
             try
             {
-                MessageBox.Show($"接收到参数: {JsonConvert.SerializeObject(args)}");
+                // MessageBox.Show($"接收到参数: {JsonConvert.SerializeObject(args)}");
 
                 // 解析参数为CreateWallArguments对象
                 var data = args.ToObject<CreateWallArguments>();
