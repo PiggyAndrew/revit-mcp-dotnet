@@ -51,8 +51,6 @@ namespace RevitTest
         {
             public void Execute(string jsonArgs, Document document)
             {
-                
-
                 using (Transaction trans = new Transaction(document , nameof(InsertWindowInWall)))
                 {
                     var filter = new FilteredElementCollector(document);
@@ -79,11 +77,6 @@ namespace RevitTest
         /// <summary>
         /// This A MCP Test
         /// </summary>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
-        /// <param name="x1"></param>
-        /// <param name="y1"></param>
-        /// <param name="z"></param>
         private class CreateWall : IRevitCommand
         {
             public void Execute(string jsonArgs, Document document)
@@ -158,7 +151,6 @@ namespace RevitTest
             System.Windows.Interop.WindowInteropHelper mainUI = new System.Windows.Interop.WindowInteropHelper(modelessView);
             mainUI.Owner = System.Diagnostics.Process.GetCurrentProcess().MainWindowHandle;
             modelessView.ShowDialog();
-
 
             return Result.Succeeded;
         }

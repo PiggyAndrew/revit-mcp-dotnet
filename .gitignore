@@ -3,3 +3,6 @@
 bin/
 //忽略obj文件夹
 obj/
+.vs/
+.*
+!/.gitignore
