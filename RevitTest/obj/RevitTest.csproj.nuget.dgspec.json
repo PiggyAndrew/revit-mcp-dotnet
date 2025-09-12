@@ -74,6 +74,10 @@
             "Revit_All_Main_Versions_API_x64": {
               "target": "Package",
               "version": "[2022.0.0, )"
+            },
+            "Tuna.Revit.Extension": {
+              "target": "Package",
+              "version": "[2022.0.17, )"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102\\RuntimeIdentifierGraph.json"

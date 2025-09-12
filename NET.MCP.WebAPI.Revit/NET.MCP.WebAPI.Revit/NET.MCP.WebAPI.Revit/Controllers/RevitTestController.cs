@@ -11,12 +11,7 @@ namespace NET.MCP.WebAPI.Revit.Controllers
     [Route("[controller]")]
     public class RevitTestController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
-
-        private readonly ILogger<RevitTestController> _logger;
+    private readonly ILogger<RevitTestController> _logger;
 
         public RevitTestController(ILogger<RevitTestController> logger)
         {
@@ -30,7 +25,7 @@ namespace NET.MCP.WebAPI.Revit.Controllers
             {
                 Name = "Demo Server",
                 Command = "powershell",
-                Arguments = ["D:\\GitHub\\revit-mcp-dotnet\\NET.Mcp.Server\\bin\\Debug\\net8.0\\NET.Mcp.Server.exe"]
+                Arguments = ["D:\\Gitspace\\revit-mcp-dotnet\\NET.Mcp.Server\\bin\\Debug\\net8.0\\NET.Mcp.Server.exe"]
             }));
             var openAiOptions = new OpenAIClientOptions();
             openAiOptions.Endpoint = new Uri("https://api.deepseek.com/v1/");

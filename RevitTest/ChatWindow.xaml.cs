@@ -1,106 +1,32 @@
 ﻿using Autodesk.Revit.UI;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Reflection;
-using System.Text;
+
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 using System.Windows.Media.Animation;
 using Autodesk.Revit.DB;
-using static RevitTest.Command;
-using static Autodesk.Revit.DB.SpecTypeId;
-using ModelContextProtocol.Client;
-using OpenAI;
-using OpenAI.Chat;
-using Microsoft.Extensions.AI;
-using System.ClientModel;
-using Revit.Async;
+
 using System.Net.Http;
-using RevitTest.Models;
+
+
 
 
 namespace RevitTest
 {
-    public class CreateWallData
-    {
-        [JsonProperty(PropertyName = "command")]
-        public string Command { get; set; } = string.Empty;
-        [JsonProperty(PropertyName = "arguments")]
-        public CreateWallArguments Args { get; set; }
-    }
-
-    public class CreateWallArguments
-    {
-        [JsonProperty(PropertyName = "start")]
-        public double[] Start { get; set; }
-        [JsonProperty(PropertyName = "end")]
-        public double[] End { get; set; }
-    }
-
-    public class ContentItem
-    {
-        public string Type { get; set; }
-        public string Text { get; set; }
-    }
-
-    public class ResponseData
-    {
-        public List<ContentItem> Content { get; set; }
-        public bool IsError { get; set; }
-    }
-    
-    // ChatResponse类定义，用于接收WebAPI返回的数据
-    public class ChatResponse
-    {
-        [JsonProperty("messages")]
-        public List<ChatResponseMessage> Messages { get; set; } = new List<ChatResponseMessage>();
-        
-        [JsonProperty("text")]
-        public string Text { get; set; }
-    }
-    
-    public class ChatResponseMessage
-    {
-        [JsonProperty("text")]
-        public string Text { get; set; }
-        
-        [JsonProperty("role")]
-        public string Role { get; set; }
-        
-        [JsonProperty("contents")]
-        public List<ChatResponseContent> Contents { get; set; } = new List<ChatResponseContent>();
-    }
-    
-    public class ChatResponseContent
-    {
-        [JsonProperty("text")]
-        public string Text { get; set; }
-        
-        [JsonProperty("type")]
-        public string Type { get; set; }
-    }
-
+   
     /// <summary>
     /// FunctionUserCallWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class FunctionUserCallWindow : Window
+    public partial class ChatWindow : Window
     {
         private string userInput;
         private readonly UIDocument uiDocument;
         private Document document;
 
-        public FunctionUserCallWindow(ExternalCommandData commandData)
+        public ChatWindow(ExternalCommandData commandData)
         {
             InitializeComponent();
             uiDocument = commandData.Application.ActiveUIDocument;
@@ -244,7 +170,7 @@ namespace RevitTest
                     if (chatResponse != null)
                     {
                         // 将ChatResponse转换为可显示的文本
-                        var responseText = JsonConvert.DeserializeObject<ChatResponse>(chatResponse);
+                        var responseText = JsonConvert.DeserializeObject<Models.ChatResponse>(chatResponse);
                         
                         // 停止思考动画
                         ThinkingIndicator.Visibility = System.Windows.Visibility.Collapsed;
