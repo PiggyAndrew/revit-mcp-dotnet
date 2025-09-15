@@ -74,40 +74,7 @@ namespace NET.Mcp.Server.Tools
                 client?.Close();
             }
         }
-        /// <summary>
-        /// Revit命令执行工具 - 通过Socket通讯向Revit发送命令
-        /// </summary>
-        /// <param name="command">要执行的命令</param>
-        /// <returns>返回Revit执行结果</returns>
-        [McpServerTool(Name = "RevitTool"), Description("Revit Execute Command , Also can execute some string output")]
-        public async Task<string> RevitCommandTool(string command)
-        {
-            try
-            {
-                // 构建发送给Revit的命令数据
-                var commandData = new
-                {
-                    command = command,
-                    args = new { }
-                };
-
-                // 将命令数据序列化为JSON
-                string jsonData = JsonConvert.SerializeObject(commandData);
-                Console.WriteLine($"发送命令到Revit: {jsonData}");
-
-                // 通过Socket发送数据到Revit并获取响应
-                string response = await SendToRevitAsync(jsonData);
-                
-                Console.WriteLine($"从Revit接收到响应: {response}");
-                return response;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"RevitCommandTool执行出错: {ex.Message}");
-                return JsonConvert.SerializeObject(new { error = ex.Message });
-            }
-        }
-
+        
 
         /// <summary>
         /// 创建墙体工具 - 通过Socket通讯向Revit发送创建墙体参数
@@ -148,88 +115,6 @@ namespace NET.Mcp.Server.Tools
             catch (Exception ex)
             {
                 Console.WriteLine($"RevitCreateWallTool执行出错: {ex.Message}");
-                return JsonConvert.SerializeObject(new { error = ex.Message });
-            }
-        }
-
-
-        /// <summary>
-        /// 修改墙体重量工具 - 通过Socket通讯向Revit发送修改墙体重量参数
-        /// </summary>
-        /// <param name="command">命令名称</param>
-        /// <param name="weight">墙体重量</param>
-        /// <returns>返回Revit执行结果</returns>
-        [McpServerTool(Name = "ChangeWallWeight"), Description("Change All Wall's Weight")]
-        public async Task<string> ChangeWallWeightTool(string command, double weight)
-        {
-            try
-            {
-                // 构建发送给Revit的命令数据
-                var commandData = new
-                {
-                    command = "ChangeWallWeight",
-                    args = new
-                    {
-                        weight = weight
-                    }
-                };
-
-                // 将命令数据序列化为JSON
-                string jsonData = JsonConvert.SerializeObject(commandData);
-                Console.WriteLine($"发送数据到Revit: {jsonData}");
-
-                // 通过Socket发送数据到Revit并获取响应
-                string response = await SendToRevitAsync(jsonData);
-                
-                Console.WriteLine($"从Revit接收到响应: {response}");
-                return response;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"ChangeWallWeightTool执行出错: {ex.Message}");
-                return JsonConvert.SerializeObject(new { error = ex.Message });
-            }
-        }
-
-
-        /// <summary>
-        /// 在墙体中插入窗户工具 - 通过Socket通讯向Revit发送插入窗户参数
-        /// </summary>
-        /// <param name="command">命令名称</param>
-        /// <param name="eId">墙体元素ID</param>
-        /// <param name="x">窗户位置X坐标</param>
-        /// <param name="y">窗户位置Y坐标</param>
-        /// <param name="z">窗户位置Z坐标</param>
-        /// <returns>返回Revit执行结果</returns>
-        [McpServerTool(Name = "InsertWindowInWall"), Description("Generation A Window In A Selection Wall , Define Window Size : 1500 x 1200 d, Need To Calculate The Window-Top Is Small Then Wall-Height , This Command Need Input Args : ElementId , LocationX , LocationY ,LocationZ")]
-        public async Task<string> InsertWindowInWallTool(string command, int eId, double x, double y, double z)
-        {
-            try
-            {
-                // 构建发送给Revit的命令数据
-                var commandData = new
-                {
-                    command = "InsertWindowInWall",
-                    args = new
-                    {
-                        eId = eId,
-                        location = new double[] { x, y, z }
-                    }
-                };
-
-                // 将命令数据序列化为JSON
-                string jsonData = JsonConvert.SerializeObject(commandData);
-                Console.WriteLine($"发送数据到Revit: {jsonData}");
-
-                // 通过Socket发送数据到Revit并获取响应
-                string response = await SendToRevitAsync(jsonData);
-                
-                Console.WriteLine($"从Revit接收到响应: {response}");
-                return response;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"InsertWindowInWallTool执行出错: {ex.Message}");
                 return JsonConvert.SerializeObject(new { error = ex.Message });
             }
         }

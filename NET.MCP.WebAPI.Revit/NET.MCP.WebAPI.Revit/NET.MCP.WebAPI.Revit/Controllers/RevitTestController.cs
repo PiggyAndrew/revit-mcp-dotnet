@@ -25,13 +25,13 @@ namespace NET.MCP.WebAPI.Revit.Controllers
             {
                 Name = "Demo Server",
                 Command = "powershell",
-                Arguments = ["D:\\Gitspace\\revit-mcp-dotnet\\NET.Mcp.Server\\bin\\Debug\\net8.0\\NET.Mcp.Server.exe"]
+                Arguments = ["D:\\GitHub\\revit-mcp-dotnet\\NET.Mcp.Server\\bin\\Debug\\net8.0\\NET.Mcp.Server.exe"]
             }));
             var openAiOptions = new OpenAIClientOptions();
             openAiOptions.Endpoint = new Uri("https://api.deepseek.com/v1/");
 
 
-            var chatClient = new ChatClient("deepseek-chat", new ApiKeyCredential("sk-XXXXXX"), openAiOptions);
+            var chatClient = new ChatClient("deepseek-chat", new ApiKeyCredential("sk-154302db687044ef8c05e5daec8839fb"), openAiOptions);
 
             var client = new ChatClientBuilder(chatClient.AsIChatClient()).UseFunctionInvocation().Build();
 

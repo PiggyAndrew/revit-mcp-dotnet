@@ -239,3 +239,4 @@ D:\Gitspace\revit-mcp-dotnet\NET.Mcp.Server\obj\Debug\net8.0\NET.Mcp.Server.pdb
 D:\Gitspace\revit-mcp-dotnet\NET.Mcp.Server\obj\Debug\net8.0\NET.Mcp.Server.genruntimeconfig.cache
 D:\Gitspace\revit-mcp-dotnet\NET.Mcp.Server\obj\Debug\net8.0\ref\NET.Mcp.Server.dll
 D:\Gitspace\revit-mcp-dotnet\NET.Mcp.Server\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\GitHub\revit-mcp-dotnet\NET.Mcp.Server\bin\Debug\net8.0\Newtonsoft.Json.dll
