@@ -16,4 +16,7 @@
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)microsoft.extensions.configuration.usersecrets\9.0.4\buildTransitive\net8.0\Microsoft.Extensions.Configuration.UserSecrets.props" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.configuration.usersecrets\9.0.4\buildTransitive\net8.0\Microsoft.Extensions.Configuration.UserSecrets.props')" />
   </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgRevit_All_Main_Versions_API_x64 Condition=" '$(PkgRevit_All_Main_Versions_API_x64)' == '' ">C:\Users\admin\.nuget\packages\revit_all_main_versions_api_x64\2022.1.0</PkgRevit_All_Main_Versions_API_x64>
+  </PropertyGroup>
 </Project>
