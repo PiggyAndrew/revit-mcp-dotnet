@@ -91,7 +91,11 @@
               "RelativeDocumentMoniker": "RevitTest\\Commands\\RevitSocketServerCommand.cs",
               "ToolTip": "D:\\GitHub\\revit-mcp-dotnet\\RevitTest\\Commands\\RevitSocketServerCommand.cs",
               "RelativeToolTip": "RevitTest\\Commands\\RevitSocketServerCommand.cs",
+<<<<<<< HEAD
               "ViewState": "AgIAANAAAAAAAAAAAAA1wLEAAAA0AAAAAAAAAA==",
+=======
+              "ViewState": "AgIAADEAAAAAAAAAAAAwwE8AAAAsAAAAAAAAAA==",
+>>>>>>> 1b491ac01097f7eeb6c9736754793f12e33390cf
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-12T06:10:57.852Z"
             },
