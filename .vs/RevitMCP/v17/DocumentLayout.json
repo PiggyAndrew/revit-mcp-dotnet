@@ -1,64 +1,94 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\GitHub\\revit-mcp-dotnet\\",
+  "WorkspaceRootPath": "D:\\Gitspace\\revit-mcp-dotnet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|d:\\github\\revit-mcp-dotnet\\revittest\\commands\\maincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\commands\\maincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Gitspace\\BUD.FireSafety\\src\\archicad\\archicad-addon-cmake-master\\Build\\DevKit\\APIDevKit-27\\Examples\\Element_Test\\Src\\Element_Hotlink.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|d:\\github\\revit-mcp-dotnet\\revittest\\chatwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\chatwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{D601F368-9B97-B7AD-7C2E-68A46F7661F2}|NET.Mcp.Server\\NET.Mcp.Server.csproj|d:\\gitspace\\revit-mcp-dotnet\\net.mcp.server\\services\\revitfilterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D601F368-9B97-B7AD-7C2E-68A46F7661F2}|NET.Mcp.Server\\NET.Mcp.Server.csproj|solutionrelative:net.mcp.server\\services\\revitfilterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|d:\\github\\revit-mcp-dotnet\\revittest\\chatwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\chatwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+      "AbsoluteMoniker": "D:0:0:{BEC5BACD-34B8-4C44-8349-7615C30CBEF6}|NET.APP.API\\NET.APP.API.csproj|d:\\gitspace\\revit-mcp-dotnet\\net.app.api\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEC5BACD-34B8-4C44-8349-7615C30CBEF6}|NET.APP.API\\NET.APP.API.csproj|solutionrelative:net.app.api\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|d:\\github\\revit-mcp-dotnet\\revittest\\commands\\stopsocketservercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\commands\\stopsocketservercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BEC5BACD-34B8-4C44-8349-7615C30CBEF6}|NET.APP.API\\NET.APP.API.csproj|d:\\gitspace\\revit-mcp-dotnet\\net.app.api\\net.app.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{BEC5BACD-34B8-4C44-8349-7615C30CBEF6}|NET.APP.API\\NET.APP.API.csproj|solutionrelative:net.app.api\\net.app.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|d:\\github\\revit-mcp-dotnet\\revittest\\commands\\revitsocketservercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\commands\\revitsocketservercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BEC5BACD-34B8-4C44-8349-7615C30CBEF6}|NET.APP.API\\NET.APP.API.csproj|d:\\gitspace\\revit-mcp-dotnet\\net.app.api\\properties\\resources.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEC5BACD-34B8-4C44-8349-7615C30CBEF6}|NET.APP.API\\NET.APP.API.csproj|solutionrelative:net.app.api\\properties\\resources.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D601F368-9B97-B7AD-7C2E-68A46F7661F2}|NET.Mcp.Server\\NET.Mcp.Server.csproj|d:\\github\\revit-mcp-dotnet\\net.mcp.server\\tools\\testtools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D601F368-9B97-B7AD-7C2E-68A46F7661F2}|NET.Mcp.Server\\NET.Mcp.Server.csproj|solutionrelative:net.mcp.server\\tools\\testtools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|d:\\github\\revit-mcp-dotnet\\revittest\\services\\createwallservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\services\\createwallservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D601F368-9B97-B7AD-7C2E-68A46F7661F2}|NET.Mcp.Server\\NET.Mcp.Server.csproj|d:\\github\\revit-mcp-dotnet\\net.mcp.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D601F368-9B97-B7AD-7C2E-68A46F7661F2}|NET.Mcp.Server\\NET.Mcp.Server.csproj|solutionrelative:net.mcp.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D601F368-9B97-B7AD-7C2E-68A46F7661F2}|NET.Mcp.Server\\NET.Mcp.Server.csproj|d:\\github\\revit-mcp-dotnet\\net.mcp.server\\net.mcp.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{D601F368-9B97-B7AD-7C2E-68A46F7661F2}|NET.Mcp.Server\\NET.Mcp.Server.csproj|d:\\gitspace\\revit-mcp-dotnet\\net.mcp.server\\net.mcp.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{D601F368-9B97-B7AD-7C2E-68A46F7661F2}|NET.Mcp.Server\\NET.Mcp.Server.csproj|solutionrelative:net.mcp.server\\net.mcp.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|d:\\github\\revit-mcp-dotnet\\revittest\\models\\createwallmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D601F368-9B97-B7AD-7C2E-68A46F7661F2}|NET.Mcp.Server\\NET.Mcp.Server.csproj|d:\\gitspace\\revit-mcp-dotnet\\net.mcp.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D601F368-9B97-B7AD-7C2E-68A46F7661F2}|NET.Mcp.Server\\NET.Mcp.Server.csproj|solutionrelative:net.mcp.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEC5BACD-34B8-4C44-8349-7615C30CBEF6}|NET.APP.API\\NET.APP.API.csproj|d:\\gitspace\\revit-mcp-dotnet\\net.app.api\\datamodel\\filter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEC5BACD-34B8-4C44-8349-7615C30CBEF6}|NET.APP.API\\NET.APP.API.csproj|solutionrelative:net.app.api\\datamodel\\filter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEC5BACD-34B8-4C44-8349-7615C30CBEF6}|NET.APP.API\\NET.APP.API.csproj|d:\\gitspace\\revit-mcp-dotnet\\net.app.api\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEC5BACD-34B8-4C44-8349-7615C30CBEF6}|NET.APP.API\\NET.APP.API.csproj|solutionrelative:net.app.api\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\admin\\.nuget\\packages\\revit_all_main_versions_api_x64\\2022.1.0\\ReadMe.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|d:\\gitspace\\revit-mcp-dotnet\\revittest\\commands\\revitsocketservercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\commands\\revitsocketservercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D601F368-9B97-B7AD-7C2E-68A46F7661F2}|NET.Mcp.Server\\NET.Mcp.Server.csproj|d:\\gitspace\\revit-mcp-dotnet\\net.mcp.server\\tools\\testtools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D601F368-9B97-B7AD-7C2E-68A46F7661F2}|NET.Mcp.Server\\NET.Mcp.Server.csproj|solutionrelative:net.mcp.server\\tools\\testtools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|d:\\gitspace\\revit-mcp-dotnet\\revittest\\commands\\maincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\commands\\maincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|d:\\gitspace\\revit-mcp-dotnet\\revittest\\models\\createwallmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\models\\createwallmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|d:\\github\\revit-mcp-dotnet\\revittest\\models\\chatmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|d:\\gitspace\\revit-mcp-dotnet\\revittest\\services\\createwallservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\services\\createwallservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|d:\\gitspace\\revit-mcp-dotnet\\revittest\\commands\\stopsocketservercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\commands\\stopsocketservercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|d:\\gitspace\\revit-mcp-dotnet\\revittest\\models\\chatmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\models\\chatmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|d:\\github\\revit-mcp-dotnet\\revittest\\revittest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|d:\\gitspace\\revit-mcp-dotnet\\revittest\\chatwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\chatwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|d:\\gitspace\\revit-mcp-dotnet\\revittest\\chatwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\chatwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|d:\\gitspace\\revit-mcp-dotnet\\revittest\\revittest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\revittest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|d:\\github\\revit-mcp-dotnet\\revittest\\converters\\booleantostyleconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|d:\\gitspace\\revit-mcp-dotnet\\revittest\\converters\\booleantostyleconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\converters\\booleantostyleconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Administrator\\AppData\\Local\\Temp\\.vsdbgsrc\\72a0bf110eeebdebdf7d23ceb0109b93a92a8d3194a9abbc482488b75e0578ff\\EventRoute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|d:\\github\\revit-mcp-dotnet\\revittest\\revittest.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|d:\\gitspace\\revit-mcp-dotnet\\revittest\\revittest.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\revittest.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
@@ -69,79 +99,269 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CreateWallService.cs",
-              "DocumentMoniker": "D:\\GitHub\\revit-mcp-dotnet\\RevitTest\\Services\\CreateWallService.cs",
-              "RelativeDocumentMoniker": "RevitTest\\Services\\CreateWallService.cs",
-              "ToolTip": "D:\\GitHub\\revit-mcp-dotnet\\RevitTest\\Services\\CreateWallService.cs",
-              "RelativeToolTip": "RevitTest\\Services\\CreateWallService.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAA4wAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T06:46:31.399Z"
+              "DocumentIndex": 0,
+              "Title": "Element_Hotlink.cpp",
+              "DocumentMoniker": "D:\\Gitspace\\BUD.FireSafety\\src\\archicad\\archicad-addon-cmake-master\\Build\\DevKit\\APIDevKit-27\\Examples\\Element_Test\\Src\\Element_Hotlink.cpp",
+              "RelativeDocumentMoniker": "..\\BUD.FireSafety\\src\\archicad\\archicad-addon-cmake-master\\Build\\DevKit\\APIDevKit-27\\Examples\\Element_Test\\Src\\Element_Hotlink.cpp",
+              "ToolTip": "D:\\Gitspace\\BUD.FireSafety\\src\\archicad\\archicad-addon-cmake-master\\Build\\DevKit\\APIDevKit-27\\Examples\\Element_Test\\Src\\Element_Hotlink.cpp",
+              "RelativeToolTip": "..\\BUD.FireSafety\\src\\archicad\\archicad-addon-cmake-master\\Build\\DevKit\\APIDevKit-27\\Examples\\Element_Test\\Src\\Element_Hotlink.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-16T03:11:38.301Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "RevitSocketServerCommand.cs",
-              "DocumentMoniker": "D:\\GitHub\\revit-mcp-dotnet\\RevitTest\\Commands\\RevitSocketServerCommand.cs",
-              "RelativeDocumentMoniker": "RevitTest\\Commands\\RevitSocketServerCommand.cs",
-              "ToolTip": "D:\\GitHub\\revit-mcp-dotnet\\RevitTest\\Commands\\RevitSocketServerCommand.cs",
-              "RelativeToolTip": "RevitTest\\Commands\\RevitSocketServerCommand.cs",
-<<<<<<< HEAD
-              "ViewState": "AgIAANAAAAAAAAAAAAA1wLEAAAA0AAAAAAAAAA==",
-=======
-              "ViewState": "AgIAADEAAAAAAAAAAAAwwE8AAAAsAAAAAAAAAA==",
->>>>>>> 1b491ac01097f7eeb6c9736754793f12e33390cf
+              "Title": "Resources.Designer.cs",
+              "DocumentMoniker": "D:\\Gitspace\\revit-mcp-dotnet\\NET.APP.API\\Properties\\Resources.Designer.cs",
+              "RelativeDocumentMoniker": "NET.APP.API\\Properties\\Resources.Designer.cs",
+              "ToolTip": "D:\\Gitspace\\revit-mcp-dotnet\\NET.APP.API\\Properties\\Resources.Designer.cs",
+              "RelativeToolTip": "NET.APP.API\\Properties\\Resources.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T06:10:57.852Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TestTools.cs",
-              "DocumentMoniker": "D:\\GitHub\\revit-mcp-dotnet\\NET.Mcp.Server\\Tools\\TestTools.cs",
-              "RelativeDocumentMoniker": "NET.Mcp.Server\\Tools\\TestTools.cs",
-              "ToolTip": "D:\\GitHub\\revit-mcp-dotnet\\NET.Mcp.Server\\Tools\\TestTools.cs",
-              "RelativeToolTip": "NET.Mcp.Server\\Tools\\TestTools.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAswGkAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T11:01:54.929Z"
+              "WhenOpened": "2025-09-15T10:15:26.99Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "StopSocketServerCommand.cs",
-              "DocumentMoniker": "D:\\GitHub\\revit-mcp-dotnet\\RevitTest\\Commands\\StopSocketServerCommand.cs",
-              "RelativeDocumentMoniker": "RevitTest\\Commands\\StopSocketServerCommand.cs",
-              "ToolTip": "D:\\GitHub\\revit-mcp-dotnet\\RevitTest\\Commands\\StopSocketServerCommand.cs",
-              "RelativeToolTip": "RevitTest\\Commands\\StopSocketServerCommand.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA0AAABnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T06:13:11.856Z"
+              "Title": "NET.APP.API",
+              "DocumentMoniker": "D:\\Gitspace\\revit-mcp-dotnet\\NET.APP.API\\NET.APP.API.csproj",
+              "RelativeDocumentMoniker": "NET.APP.API\\NET.APP.API.csproj",
+              "ToolTip": "D:\\Gitspace\\revit-mcp-dotnet\\NET.APP.API\\NET.APP.API.csproj",
+              "RelativeToolTip": "NET.APP.API\\NET.APP.API.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-15T10:15:11.286Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ChatModel.cs",
-              "DocumentMoniker": "D:\\GitHub\\revit-mcp-dotnet\\RevitTest\\Models\\ChatModel.cs",
-              "RelativeDocumentMoniker": "RevitTest\\Models\\ChatModel.cs",
-              "ToolTip": "D:\\GitHub\\revit-mcp-dotnet\\RevitTest\\Models\\ChatModel.cs",
-              "RelativeToolTip": "RevitTest\\Models\\ChatModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Constants.cs",
+              "DocumentMoniker": "D:\\Gitspace\\revit-mcp-dotnet\\NET.APP.API\\Constants.cs",
+              "RelativeDocumentMoniker": "NET.APP.API\\Constants.cs",
+              "ToolTip": "D:\\Gitspace\\revit-mcp-dotnet\\NET.APP.API\\Constants.cs",
+              "RelativeToolTip": "NET.APP.API\\Constants.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAgwFUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T06:41:27.934Z"
+              "WhenOpened": "2025-09-15T10:13:22.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NET.Mcp.Server",
+              "DocumentMoniker": "D:\\Gitspace\\revit-mcp-dotnet\\NET.Mcp.Server\\NET.Mcp.Server.csproj",
+              "RelativeDocumentMoniker": "NET.Mcp.Server\\NET.Mcp.Server.csproj",
+              "ToolTip": "D:\\Gitspace\\revit-mcp-dotnet\\NET.Mcp.Server\\NET.Mcp.Server.csproj",
+              "RelativeToolTip": "NET.Mcp.Server\\NET.Mcp.Server.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-15T09:43:23.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "RevitFilterService.cs",
+              "DocumentMoniker": "D:\\Gitspace\\revit-mcp-dotnet\\NET.Mcp.Server\\Services\\RevitFilterService.cs",
+              "RelativeDocumentMoniker": "NET.Mcp.Server\\Services\\RevitFilterService.cs",
+              "ToolTip": "D:\\Gitspace\\revit-mcp-dotnet\\NET.Mcp.Server\\Services\\RevitFilterService.cs",
+              "RelativeToolTip": "NET.Mcp.Server\\Services\\RevitFilterService.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAiwFwAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T09:43:25.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ReadMe.txt",
+              "DocumentMoniker": "C:\\Users\\admin\\.nuget\\packages\\revit_all_main_versions_api_x64\\2022.1.0\\ReadMe.txt",
+              "ToolTip": "C:\\Users\\admin\\.nuget\\packages\\revit_all_main_versions_api_x64\\2022.1.0\\ReadMe.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-09-15T06:23:56.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Enums.cs",
+              "DocumentMoniker": "D:\\Gitspace\\revit-mcp-dotnet\\NET.APP.API\\Enums.cs",
+              "RelativeDocumentMoniker": "NET.APP.API\\Enums.cs",
+              "ToolTip": "D:\\Gitspace\\revit-mcp-dotnet\\NET.APP.API\\Enums.cs",
+              "RelativeToolTip": "NET.APP.API\\Enums.cs",
+              "ViewState": "AgIAAIkBAAAAAAAAAAAAAJEBAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T05:12:42.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Filter.cs",
+              "DocumentMoniker": "D:\\Gitspace\\revit-mcp-dotnet\\NET.APP.API\\DataModel\\Filter.cs",
+              "RelativeDocumentMoniker": "NET.APP.API\\DataModel\\Filter.cs",
+              "ToolTip": "D:\\Gitspace\\revit-mcp-dotnet\\NET.APP.API\\DataModel\\Filter.cs",
+              "RelativeToolTip": "NET.APP.API\\DataModel\\Filter.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwC0AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T05:11:06.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Gitspace\\revit-mcp-dotnet\\NET.Mcp.Server\\Program.cs",
+              "RelativeDocumentMoniker": "NET.Mcp.Server\\Program.cs",
+              "ToolTip": "D:\\Gitspace\\revit-mcp-dotnet\\NET.Mcp.Server\\Program.cs",
+              "RelativeToolTip": "NET.Mcp.Server\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T03:00:57.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CreateWallService.cs",
+              "DocumentMoniker": "D:\\Gitspace\\revit-mcp-dotnet\\RevitTest\\Services\\CreateWallService.cs",
+              "RelativeDocumentMoniker": "RevitTest\\Services\\CreateWallService.cs",
+              "ToolTip": "D:\\Gitspace\\revit-mcp-dotnet\\RevitTest\\Services\\CreateWallService.cs",
+              "RelativeToolTip": "RevitTest\\Services\\CreateWallService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwCIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T06:46:31.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RevitSocketServerCommand.cs",
+              "DocumentMoniker": "D:\\Gitspace\\revit-mcp-dotnet\\RevitTest\\Commands\\RevitSocketServerCommand.cs",
+              "RelativeDocumentMoniker": "RevitTest\\Commands\\RevitSocketServerCommand.cs",
+              "ToolTip": "D:\\Gitspace\\revit-mcp-dotnet\\RevitTest\\Commands\\RevitSocketServerCommand.cs",
+              "RelativeToolTip": "RevitTest\\Commands\\RevitSocketServerCommand.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAwwHUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T06:10:57.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MainCommand.cs",
+              "DocumentMoniker": "D:\\Gitspace\\revit-mcp-dotnet\\RevitTest\\Commands\\MainCommand.cs",
+              "RelativeDocumentMoniker": "RevitTest\\Commands\\MainCommand.cs",
+              "ToolTip": "D:\\Gitspace\\revit-mcp-dotnet\\RevitTest\\Commands\\MainCommand.cs",
+              "RelativeToolTip": "RevitTest\\Commands\\MainCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T03:04:30.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TestTools.cs",
+              "DocumentMoniker": "D:\\Gitspace\\revit-mcp-dotnet\\NET.Mcp.Server\\Tools\\TestTools.cs",
+              "RelativeDocumentMoniker": "NET.Mcp.Server\\Tools\\TestTools.cs",
+              "ToolTip": "D:\\Gitspace\\revit-mcp-dotnet\\NET.Mcp.Server\\Tools\\TestTools.cs",
+              "RelativeToolTip": "NET.Mcp.Server\\Tools\\TestTools.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGEAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T11:01:54.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CreateWallModel.cs",
+              "DocumentMoniker": "D:\\Gitspace\\revit-mcp-dotnet\\RevitTest\\Models\\CreateWallModel.cs",
+              "RelativeDocumentMoniker": "RevitTest\\Models\\CreateWallModel.cs",
+              "ToolTip": "D:\\Gitspace\\revit-mcp-dotnet\\RevitTest\\Models\\CreateWallModel.cs",
+              "RelativeToolTip": "RevitTest\\Models\\CreateWallModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T06:45:09.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "StopSocketServerCommand.cs",
+              "DocumentMoniker": "D:\\Gitspace\\revit-mcp-dotnet\\RevitTest\\Commands\\StopSocketServerCommand.cs",
+              "RelativeDocumentMoniker": "RevitTest\\Commands\\StopSocketServerCommand.cs",
+              "ToolTip": "D:\\Gitspace\\revit-mcp-dotnet\\RevitTest\\Commands\\StopSocketServerCommand.cs",
+              "RelativeToolTip": "RevitTest\\Commands\\StopSocketServerCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T06:13:11.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ChatModel.cs",
+              "DocumentMoniker": "D:\\Gitspace\\revit-mcp-dotnet\\RevitTest\\Models\\ChatModel.cs",
+              "RelativeDocumentMoniker": "RevitTest\\Models\\ChatModel.cs",
+              "ToolTip": "D:\\Gitspace\\revit-mcp-dotnet\\RevitTest\\Models\\ChatModel.cs",
+              "RelativeToolTip": "RevitTest\\Models\\ChatModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T06:41:27.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "ChatWindow.xaml",
-              "DocumentMoniker": "D:\\GitHub\\revit-mcp-dotnet\\RevitTest\\ChatWindow.xaml",
+              "DocumentMoniker": "D:\\Gitspace\\revit-mcp-dotnet\\RevitTest\\ChatWindow.xaml",
               "RelativeDocumentMoniker": "RevitTest\\ChatWindow.xaml",
-              "ToolTip": "D:\\GitHub\\revit-mcp-dotnet\\RevitTest\\ChatWindow.xaml",
+              "ToolTip": "D:\\Gitspace\\revit-mcp-dotnet\\RevitTest\\ChatWindow.xaml",
               "RelativeToolTip": "RevitTest\\ChatWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-07-01T03:05:33.661Z",
@@ -149,104 +369,58 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 18,
               "Title": "ChatWindow.xaml.cs",
-              "DocumentMoniker": "D:\\GitHub\\revit-mcp-dotnet\\RevitTest\\ChatWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Gitspace\\revit-mcp-dotnet\\RevitTest\\ChatWindow.xaml.cs",
               "RelativeDocumentMoniker": "RevitTest\\ChatWindow.xaml.cs",
-              "ToolTip": "D:\\GitHub\\revit-mcp-dotnet\\RevitTest\\ChatWindow.xaml.cs",
+              "ToolTip": "D:\\Gitspace\\revit-mcp-dotnet\\RevitTest\\ChatWindow.xaml.cs",
               "RelativeToolTip": "RevitTest\\ChatWindow.xaml.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAzwFYAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-01T03:05:49.492Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\GitHub\\revit-mcp-dotnet\\NET.Mcp.Server\\Program.cs",
-              "RelativeDocumentMoniker": "NET.Mcp.Server\\Program.cs",
-              "ToolTip": "D:\\GitHub\\revit-mcp-dotnet\\NET.Mcp.Server\\Program.cs",
-              "RelativeToolTip": "NET.Mcp.Server\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T03:00:57.073Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainCommand.cs",
-              "DocumentMoniker": "D:\\GitHub\\revit-mcp-dotnet\\RevitTest\\Commands\\MainCommand.cs",
-              "RelativeDocumentMoniker": "RevitTest\\Commands\\MainCommand.cs",
-              "ToolTip": "D:\\GitHub\\revit-mcp-dotnet\\RevitTest\\Commands\\MainCommand.cs",
-              "RelativeToolTip": "RevitTest\\Commands\\MainCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAxwA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T03:04:30.008Z",
+              "DocumentIndex": 19,
+              "Title": "RevitTest.csproj",
+              "DocumentMoniker": "D:\\Gitspace\\revit-mcp-dotnet\\RevitTest\\RevitTest.csproj",
+              "RelativeDocumentMoniker": "RevitTest\\RevitTest.csproj",
+              "ToolTip": "D:\\Gitspace\\revit-mcp-dotnet\\RevitTest\\RevitTest.csproj",
+              "RelativeToolTip": "RevitTest\\RevitTest.csproj",
+              "ViewState": "AgIAAAEAAAAAAAAAAABBwB8AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-11T11:02:53.715Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "NET.Mcp.Server.csproj",
-              "DocumentMoniker": "D:\\GitHub\\revit-mcp-dotnet\\NET.Mcp.Server\\NET.Mcp.Server.csproj",
-              "RelativeDocumentMoniker": "NET.Mcp.Server\\NET.Mcp.Server.csproj",
-              "ToolTip": "D:\\GitHub\\revit-mcp-dotnet\\NET.Mcp.Server\\NET.Mcp.Server.csproj",
-              "RelativeToolTip": "NET.Mcp.Server\\NET.Mcp.Server.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-12T13:17:40.873Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CreateWallModel.cs",
-              "DocumentMoniker": "D:\\GitHub\\revit-mcp-dotnet\\RevitTest\\Models\\CreateWallModel.cs",
-              "RelativeDocumentMoniker": "RevitTest\\Models\\CreateWallModel.cs",
-              "ToolTip": "D:\\GitHub\\revit-mcp-dotnet\\RevitTest\\Models\\CreateWallModel.cs",
-              "RelativeToolTip": "RevitTest\\Models\\CreateWallModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBEAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T06:45:09.731Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "RevitTest.csproj",
-              "DocumentMoniker": "D:\\GitHub\\revit-mcp-dotnet\\RevitTest\\RevitTest.csproj",
-              "RelativeDocumentMoniker": "RevitTest\\RevitTest.csproj",
-              "ToolTip": "D:\\GitHub\\revit-mcp-dotnet\\RevitTest\\RevitTest.csproj",
-              "RelativeToolTip": "RevitTest\\RevitTest.csproj",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB8AAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-11T11:02:53.715Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 22,
               "Title": "RevitTest",
-              "DocumentMoniker": "D:\\GitHub\\revit-mcp-dotnet\\RevitTest\\RevitTest.csproj",
+              "DocumentMoniker": "D:\\Gitspace\\revit-mcp-dotnet\\RevitTest\\RevitTest.csproj",
               "RelativeDocumentMoniker": "RevitTest\\RevitTest.csproj",
-              "ToolTip": "D:\\GitHub\\revit-mcp-dotnet\\RevitTest\\RevitTest.csproj",
+              "ToolTip": "D:\\Gitspace\\revit-mcp-dotnet\\RevitTest\\RevitTest.csproj",
               "RelativeToolTip": "RevitTest\\RevitTest.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-11T11:25:00.53Z"
+              "WhenOpened": "2025-09-11T11:25:00.53Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 20,
               "Title": "BooleanToStyleConverter.cs",
-              "DocumentMoniker": "D:\\GitHub\\revit-mcp-dotnet\\RevitTest\\Converters\\BooleanToStyleConverter.cs",
+              "DocumentMoniker": "D:\\Gitspace\\revit-mcp-dotnet\\RevitTest\\Converters\\BooleanToStyleConverter.cs",
               "RelativeDocumentMoniker": "RevitTest\\Converters\\BooleanToStyleConverter.cs",
-              "ToolTip": "D:\\GitHub\\revit-mcp-dotnet\\RevitTest\\Converters\\BooleanToStyleConverter.cs",
+              "ToolTip": "D:\\Gitspace\\revit-mcp-dotnet\\RevitTest\\Converters\\BooleanToStyleConverter.cs",
               "RelativeToolTip": "RevitTest\\Converters\\BooleanToStyleConverter.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T13:58:35.082Z"
+              "WhenOpened": "2025-09-11T13:58:35.082Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 21,
               "Title": "EventRoute.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\.vsdbgsrc\\72a0bf110eeebdebdf7d23ceb0109b93a92a8d3194a9abbc482488b75e0578ff\\EventRoute.cs",
               "ToolTip": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\.vsdbgsrc\\72a0bf110eeebdebdf7d23ceb0109b93a92a8d3194a9abbc482488b75e0578ff\\EventRoute.cs",
